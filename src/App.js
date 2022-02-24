@@ -43,11 +43,11 @@ function App() {
   return (
     <Container className={classes.conatiner}>
           <Card>
-              <h2 className={classes.title}>MindDev bilan QR kodni skaynerlang va yuklab oling</h2>
+              <h2 className={classes.title}>MindDev bilan QR kodni skanerlang va yuklab oling</h2>
               <CardContent>
                   <Grid container spacing={2}>
                       <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
-                          <TextField label="Enter Text Here" onChange={(e) => setText(e.target.value)}/>
+                          <TextField label="Bu yerga text/link yozing" onChange={(e) => setText(e.target.value)}/>
                           <Button className={classes.btn} variant="contained" 
                             color="primary" onClick={() => generateQrCode()}>Tekshirish</Button>
                             <br/>
@@ -68,17 +68,17 @@ function App() {
                           onScan={handleScanFile}
                           legacyMode
                         />
-                        <h3>Skaynerlangan kod: {scanResultFile}</h3>
+                        <h3>Skanerlangan kod: {scanResultFile}</h3>
                       </Grid>
                       <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
-                         <h3>WebKamera orqli skaynerlash</h3>
+                         <h3>WebKamera orqali skanerlash</h3>
                          <QrReader
                          delay={300}
                          style={{width: '100%'}}
                          onError={handleErrorWebCam}
                          onScan={handleScanWebCam}
                          />
-                         <h3>WebKamera orqali skaynerlandi: {scanResultWebCam}</h3>
+                         <h3>WebKamera orqali skanerlandi: {scanResultWebCam}</h3>
                       </Grid>
                   </Grid>
               </CardContent>
