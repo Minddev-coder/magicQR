@@ -59,7 +59,7 @@ function App() {
                               </a>) : null}
                       </Grid>
                       <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
-                        <Button className={classes.btn} variant="contained" color="secondary" onClick={onScanFile}>QR kodni skaynerlash</Button>
+                        <Button className={classes.btn} variant="contained" color="secondary" onClick={onScanFile}>QR kodni kiritish</Button>
                         <QrReader
                           ref={qrRef}
                           delay={300}
